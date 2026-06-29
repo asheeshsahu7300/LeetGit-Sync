@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "LeetGit",
+  "version": "1.0",
+  "description": "Automatically syncs LeetCode submissions to your GitHub repository.",
+  "permissions": [
+    "storage",
+    "cookies",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "https://leetcode.com/*",
+    "https://api.github.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icons/icon.png"
+    }
+  },
+  "icons": {
+    "128": "icons/icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

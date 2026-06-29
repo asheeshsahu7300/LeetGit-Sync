@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>LeetGit Settings</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="background-animation"></div>
+  <div class="container">
+    <div class="header">
+      <div class="logo-container">
+        <img src="icons/icon.png" class="logo" alt="LeetGit Logo">
+      </div>
+      <h2>LeetGit Sync</h2>
+      <p class="subtitle">Automate your LeetCode journey</p>
+    </div>
+
+    <div class="form-group">
+      <label for="githubToken">GitHub Personal Access Token</label>
+      <div class="input-wrapper">
+        <svg class="input-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 15V17M6 21H18C19.1046 21 20 20.1046 20 19V11C20 9.89543 19.1046 9 18 9H6C4.89543 9 4 9.89543 4 11V19C4 20.1046 4.89543 21 6 21ZM16 9V7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7V9H16Z"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <input type="password" id="githubToken" placeholder="ghp_xxxxxxxxxxxxxxxxx">
+      </div>
+      <small>Requires <span class="highlight">'repo'</span> scope. Stored securely in browser memory (clears on
+        restart).</small>
+    </div>
+
+    <div class="form-group">
+      <label for="githubRepo">GitHub Repository</label>
+      <div class="input-wrapper">
+        <svg class="input-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M9 19C9 19 9 16 12 16C15 16 15 19 15 19M12 12C9.79086 12 8 10.2091 8 8C8 5.79086 9.79086 4 12 4C14.2091 4 16 5.79086 16 8C16 10.2091 14.2091 12 12 12ZM22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <input type="text" id="githubRepo" placeholder="username/leetcode-solutions">
+      </div>
+    </div>
+
+    <button id="saveBtn">
+      <span class="btn-text">Save Settings</span>
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+    <div id="status" class="status"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>
